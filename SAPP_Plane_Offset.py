@@ -19,12 +19,14 @@ import csv
 from matplotlib.ticker import FormatStrFormatter
 
 detection_dia = 0.0508
-offset_amount = 0.2
+offset_amount = 0.0508
 valid_scan_dist = 0.0508
-scanning = False
-start_loc = 'c:/Users/jetry/OneDrive/Desktop/csv_files/' # File location, example: c:/Users/username/Desktop/SAPP_ME416/
-loc_append = 'data' # File name format, example: GarbageCan, this will be appended with a number to automatically generate all file names
+scanning_check = False
+start_loc = '' # File location, example: c:/Users/username/Desktop/SAPP_ME416/
+loc_append = '' # File name format, example: GarbageCan, this will be appended with a number to automatically generate all file names
 amount_of_files = 4 # Number of files, starting at 0. Final file names should be: 'c:/Users/username/Desktop/SAPP_ME416/GarbageCan#'
+
+
 file_names = []
 for i in range(amount_of_files):
     temp_loc = start_loc
@@ -394,7 +396,7 @@ def offset_and_plot(all_file_names):
     ax.xaxis.set_major_formatter(FormatStrFormatter('%.1f'))
     ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f'))
     ax.zaxis.set_major_formatter(FormatStrFormatter('%.1f'))
-    ax.set_title("        Object (R) with found offset points (B)")
+    ax.set_title("Offset Object")
     # ax.scatter(x_pts, y_pts, z_pts, color = 'r')
     ax.scatter(offset_x, offset_y, offset_z, color = 'b')
     ax.scatter(obj_avg[0], obj_avg[1], obj_avg[2], color = 'y')
