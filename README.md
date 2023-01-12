@@ -1,7 +1,7 @@
 # WSU-SAPP-Point_Cloud_Processing
 This code showcases the work done throughout the WSU ME 416: Senior Capstone Project (sponsored by Los Alamos National Lab) to accept and process a point cloud of simple shapes. Initial implementation is designed for creating points offset from a surface such that they could be offloaded to a path planning algorithm for a robotic arm with a gamma detector.
 
-Note: The code beginning with "LINUX" is only operable on Linux based software due to one of the libraries it utilizes only being available within Linux (pcl).
+Note: The code beginning with "LINUX" is only operable on Linux based software due to one of the libraries it utilizes only being available within Linux (pcl). All units are in meters
 
 ## Use and Operation
 
